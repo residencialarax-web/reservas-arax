@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f9fc">
+    <title>Reservas Arax</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17324d;
+            background: linear-gradient(180deg, #f7fbfd 0%, #eef7fa 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1050px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 18px;
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(32, 75, 105, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: #173b5c;
+        }
+
+        h1 span {
+            color: #28aa78;
+        }
+
+        .subtitle {
+            margin: 18px 0 42px;
+            color: #60758a;
+            font-size: clamp(18px, 2.5vw, 25px);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .button {
+            min-height: 190px;
+            border-radius: 25px;
+            padding: 30px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 30px rgba(35, 70, 95, 0.14);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 38px rgba(35, 70, 95, 0.22);
+        }
+
+        .button:active {
+            transform: translateY(-1px);
+        }
+
+        .button-icon {
+            font-size: 45px;
+            margin-bottom: 14px;
+        }
+
+        .button-title {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .arrow {
+            font-size: 30px;
+            margin-top: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .button:hover .arrow {
+            transform: translateX(7px);
+        }
+
+        .blue {
+            background: linear-gradient(135deg, #5ba9ed, #398fdc);
+        }
+
+        .green {
+            background: linear-gradient(135deg, #55c89d, #31ae7e);
+        }
+
+        .orange {
+            background: linear-gradient(135deg, #f7bd50, #efa62a);
+        }
+
+        .purple {
+            background: linear-gradient(135deg, #8980df, #7067d0);
+        }
+
+        footer {
+            margin-top: 42px;
+            color: #8195a7;
+            font-size: 15px;
+        }
+
+        footer .line {
+            width: 120px;
+            height: 1px;
+            background: #c9d8e1;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px;
+        }
+
+        .waves {
+            position: fixed;
+            bottom: -80px;
+            left: -5%;
+            width: 110%;
+            height: 180px;
+            background: rgba(91, 169, 237, 0.12);
+            border-radius: 50% 50% 0 0;
+            z-index: 0;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            .icon {
+                width: 70px;
+                height: 70px;
+                font-size: 36px;
+            }
+
+            .subtitle {
+                margin-bottom: 28px;
+            }
+
+            .buttons {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .button {
+                min-height: 145px;
+                border-radius: 20px;
+            }
+
+            .button-icon {
+                font-size: 38px;
+            }
+
+            .button-title {
+                font-size: 21px;
+            }
+
+            footer {
+                margin-top: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">📅</div>
+
+        <h1>Reservas <span>Arax</span></h1>
+
+        <p class="subtitle">
+            Gestiona tus reservas de forma fácil y rápida
+        </p>
+
+        <div class="buttons">
+
+            <a class="button blue" id="sala1" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="button-icon">👥</div>
+                <div class="button-title">Reserva Sala 1</div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a class="button green" id="sala2" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="button-icon">📅</div>
+                <div class="button-title">Reserva Sala 2</div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a class="button orange" id="normas" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="button-icon">📄</div>
+                <div class="button-title">Normas de uso</div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a class="button purple" id="soporte" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="button-icon">🎧</div>
+                <div class="button-title">Soporte</div>
+                <div class="arrow">→</div>
+            </a>
+
+        </div>
+
+        <footer>
+            <span class="line"></span>
+            Reservas Arax
+            <span class="line"></span>
+            <br><br>
+            Un entorno de trabajo compartido
+        </footer>
+
+    </div>
+
+    <div class="waves"></div>
+
+    <script>
+        /*
+         * ============================================================
+         * CAMBIA AQUÍ LOS ENLACES
+         * ============================================================
+         *
+         * Cuando tengas las direcciones definitivas, modifica
+         * únicamente estas cuatro líneas.
+         */
+
+        const enlaces = {
+            sala1: "https://www.google.es",
+            sala2: "https://www.google.es",
+            normas: "https://www.google.es",
+            soporte: "https://www.google.es"
+        };
+
+        document.getElementById("sala1").href = enlaces.sala1;
+        document.getElementById("sala2").href = enlaces.sala2;
+        document.getElementById("normas").href = enlaces.normas;
+        document.getElementById("soporte").href = enlaces.soporte;
+    </script>
+
+</body>
+</html>
