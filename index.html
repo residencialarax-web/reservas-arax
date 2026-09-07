@@ -215,6 +215,12 @@
                 <div class="arrow">→</div>
             </a>
 
+			<a class="button blue" id="SobreReservas" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="button-icon">📄</div>
+                <div class="button-title">Sobre Reservas</div>
+                <div class="arrow">→</div>
+            </a>
+
             <a class="button green" id="sala2" href="#" target="_blank" rel="noopener noreferrer">
                 <div class="button-icon">📅</div>
                 <div class="button-title">Reserva Sala 2</div>
@@ -230,6 +236,12 @@
             <a class="button purple" id="soporte" href="#" target="_blank" rel="noopener noreferrer">
                 <div class="button-icon">🎧</div>
                 <div class="button-title">Soporte</div>
+                <div class="arrow">→</div>
+            </a>
+			
+            <a class="button green" id="sala3" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="button-icon">📅</div>
+                <div class="button-title">Reserva Sala 3</div>
                 <div class="arrow">→</div>
             </a>
 
@@ -260,14 +272,18 @@
         const enlaces = {
             sala1: "https://script.google.com/macros/s/AKfycbw1dD5ZaYfl1fII1y5ZJo345HoRNRliGwte2OuQ7sAxMODuvUErduBwqBs-02MZNUutWQ/exec",
             sala2: "https://www.google.es",
+			sala3: "https://www.google.es",
             normas: "https://www.google.es",
             soporte: "https://www.google.es"
+			sobrereservas: "https://residencialarax-web.github.io/reservas-arax/Ventajas_Sala_Comunitaria.html"
         };
 
         document.getElementById("sala1").href = enlaces.sala1;
         document.getElementById("sala2").href = enlaces.sala2;
+		document.getElementById("sala3").href = enlaces.sala3;
         document.getElementById("normas").href = enlaces.normas;
         document.getElementById("soporte").href = enlaces.soporte;
+		document.getElementById("SobreReservas").href = enlaces.sobrereservas;		
     </script>
 
 </body>
